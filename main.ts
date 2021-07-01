@@ -1,3 +1,6 @@
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
@@ -142,3 +145,4 @@ let mySprite = sprites.create(img`
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
+game.showLongText("Για να σε δω να προσπαθείς να βρείς τον ιο!", DialogLayout.Full)
