@@ -122,20 +122,23 @@ scene.setBackgroundImage(img`
     `)
 tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
+    . . . b b b b b b b b b . . . . 
+    . . b 1 d d d d d d d 1 b . . . 
+    . b 1 1 1 1 1 1 1 1 1 1 1 b . . 
+    . b d b c c c c c c c b d b . . 
+    . b d c f 7 f 7 f 7 f c d b . . 
+    . b d c f 7 f 7 f 7 f c d b . . 
+    . b d c f 7 f 7 f 7 f c d b . . 
+    . b d c f 7 f 7 f 7 f c d b . . 
+    . b d c f 7 f 7 f 7 f c d b . . 
+    . b d c c c c c c c c c d b . . 
+    . c b b b b b b b b b b b c . . 
+    c b c c c c c c c c c c c b c . 
+    c 1 d d d d d d d d d d d 1 c . 
+    c 1 d 1 1 d 1 1 d 1 1 d 1 1 c . 
+    c b b b b b b b b b b b b b c . 
+    c c c c c c c c c c c c c c c . 
     `, SpriteKind.Player)
+tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
+controller.moveSprite(mySprite)
+scene.cameraFollowSprite(mySprite)
