@@ -1,5 +1,7 @@
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-	
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.buttonOrange, function (sprite, location) {
+    music.bigCrash.play()
+    game.showLongText("ΤΕΛΙΚΟΣ ΚΩΔΙΚΟΣ: HACKER", DialogLayout.Bottom)
+    game.over(true, effects.splatter)
 })
 scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
